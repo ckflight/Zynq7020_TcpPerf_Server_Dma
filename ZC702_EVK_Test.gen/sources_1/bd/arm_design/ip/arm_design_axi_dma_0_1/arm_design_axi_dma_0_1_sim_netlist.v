@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Mon Nov 24 09:54:51 2025
+// Date        : Wed Nov 26 13:59:00 2025
 // Host        : DESKTOP-BEUFM6D running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top arm_design_axi_dma_0_1 -prefix
-//               arm_design_axi_dma_0_1_ arm_design_axi_dma_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/ip/arm_design_axi_dma_0_1/arm_design_axi_dma_0_1_sim_netlist.v
 // Design      : arm_design_axi_dma_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -59,10 +59,10 @@ module arm_design_axi_dma_0_1
     s_axis_s2mm_tlast,
     s2mm_introut,
     axi_dma_tstvec);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_LITE_ACLK CLK" *) (* x_interface_mode = "slave S_AXI_LITE_ACLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE_ACLK, ASSOCIATED_BUSIF S_AXI_LITE:M_AXI, ASSOCIATED_RESET axi_resetn, FREQ_HZ 142857132, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_lite_aclk;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 M_AXI_S2MM_CLK CLK" *) (* x_interface_mode = "slave M_AXI_S2MM_CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_S2MM_CLK, ASSOCIATED_BUSIF M_AXI_S2MM:S_AXIS_S2MM:S_AXIS_STS, ASSOCIATED_RESET s2mm_prmry_reset_out_n:s2mm_sts_reset_out_n, FREQ_HZ 142857132, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input m_axi_s2mm_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_LITE_ACLK CLK" *) (* x_interface_mode = "slave S_AXI_LITE_ACLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE_ACLK, ASSOCIATED_BUSIF S_AXI_LITE:M_AXI, ASSOCIATED_RESET axi_resetn, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_lite_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 M_AXI_S2MM_CLK CLK" *) (* x_interface_mode = "slave M_AXI_S2MM_CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_S2MM_CLK, ASSOCIATED_BUSIF M_AXI_S2MM:S_AXIS_S2MM:S_AXIS_STS, ASSOCIATED_RESET s2mm_prmry_reset_out_n:s2mm_sts_reset_out_n, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input m_axi_s2mm_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 AXI_RESETN RST" *) (* x_interface_mode = "slave AXI_RESETN" *) (* x_interface_parameter = "XIL_INTERFACENAME AXI_RESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input axi_resetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWVALID" *) (* x_interface_mode = "slave S_AXI_LITE" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 142857132, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axi_lite_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWVALID" *) (* x_interface_mode = "slave S_AXI_LITE" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_LITE, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 150000000, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input s_axi_lite_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWREADY" *) output s_axi_lite_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE AWADDR" *) input [9:0]s_axi_lite_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE WVALID" *) input s_axi_lite_wvalid;
@@ -78,7 +78,7 @@ module arm_design_axi_dma_0_1
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RREADY" *) input s_axi_lite_rready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RDATA" *) output [31:0]s_axi_lite_rdata;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI_LITE RRESP" *) output [1:0]s_axi_lite_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWADDR" *) (* x_interface_mode = "master M_AXI_S2MM" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_S2MM, SUPPORTS_NARROW_BURST 0, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 142857132, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, NUM_READ_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]m_axi_s2mm_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWADDR" *) (* x_interface_mode = "master M_AXI_S2MM" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_S2MM, SUPPORTS_NARROW_BURST 0, NUM_WRITE_OUTSTANDING 16, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 150000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, NUM_READ_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]m_axi_s2mm_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWLEN" *) output [7:0]m_axi_s2mm_awlen;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWSIZE" *) output [2:0]m_axi_s2mm_awsize;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM AWBURST" *) output [1:0]m_axi_s2mm_awburst;
@@ -95,7 +95,7 @@ module arm_design_axi_dma_0_1
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM BVALID" *) input m_axi_s2mm_bvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_S2MM BREADY" *) output m_axi_s2mm_bready;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S2MM_PRMRY_RESET_OUT_N RST" *) (* x_interface_mode = "master S2MM_PRMRY_RESET_OUT_N" *) (* x_interface_parameter = "XIL_INTERFACENAME S2MM_PRMRY_RESET_OUT_N, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output s2mm_prmry_reset_out_n;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TDATA" *) (* x_interface_mode = "slave S_AXIS_S2MM" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXIS_S2MM, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 142857132, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input [63:0]s_axis_s2mm_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TDATA" *) (* x_interface_mode = "slave S_AXIS_S2MM" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXIS_S2MM, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 150000000, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *) input [63:0]s_axis_s2mm_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TKEEP" *) input [7:0]s_axis_s2mm_tkeep;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TVALID" *) input s_axis_s2mm_tvalid;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 S_AXIS_S2MM TREADY" *) output s_axis_s2mm_tready;
@@ -403,6 +403,7 @@ module arm_design_axi_dma_0_1
        (.P(\<const1> ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover" *) 
 module arm_design_axi_dma_0_1_axi_datamover
    (s_axis_s2mm_tready,
     m_axi_s2mm_awburst,
@@ -556,6 +557,7 @@ module arm_design_axi_dma_0_1_axi_datamover
         .sig_s_h_halt_reg_reg(sig_s_h_halt_reg_reg));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_addr_cntl" *) 
 module arm_design_axi_dma_0_1_axi_datamover_addr_cntl
    (out,
     FIFO_Full_reg,
@@ -1050,6 +1052,7 @@ module arm_design_axi_dma_0_1_axi_datamover_addr_cntl
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_cmd_status" *) 
 module arm_design_axi_dma_0_1_axi_datamover_cmd_status
    (sig_cmd2mstr_cmd_valid,
     \USE_SINGLE_REG.sig_regfifo_empty_reg_reg ,
@@ -1154,6 +1157,7 @@ module arm_design_axi_dma_0_1_axi_datamover_cmd_status
         .sig_psm_halt(sig_psm_halt));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_fifo" *) 
 module arm_design_axi_dma_0_1_axi_datamover_fifo
    (sig_cmd2mstr_cmd_valid,
     \USE_SINGLE_REG.sig_regfifo_empty_reg_reg_0 ,
@@ -3301,6 +3305,7 @@ module arm_design_axi_dma_0_1_axi_datamover_fifo__parameterized6
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_ibttcc" *) 
 module arm_design_axi_dma_0_1_axi_datamover_ibttcc
    (sig_csm_ld_xfer,
     sig_psm_pop_input_cmd,
@@ -7831,6 +7836,7 @@ module arm_design_axi_dma_0_1_axi_datamover_ibttcc
         .R(sig_xfer_cache_reg0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_indet_btt" *) 
 module arm_design_axi_dma_0_1_axi_datamover_indet_btt
    (dout,
     empty,
@@ -8513,6 +8519,7 @@ module arm_design_axi_dma_0_1_axi_datamover_indet_btt
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_mssai_skid_buf" *) 
 module arm_design_axi_dma_0_1_axi_datamover_mssai_skid_buf
    (out,
     sig_m_valid_out_reg_0,
@@ -10898,6 +10905,7 @@ module arm_design_axi_dma_0_1_axi_datamover_mssai_skid_buf
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_reset" *) 
 module arm_design_axi_dma_0_1_axi_datamover_reset
    (sig_cmd_stat_rst_int_reg_n,
     sig_rst2all_stop_request,
@@ -11076,6 +11084,7 @@ module arm_design_axi_dma_0_1_axi_datamover_reset
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_s2mm_full_wrap" *) 
 module arm_design_axi_dma_0_1_axi_datamover_s2mm_full_wrap
    (s_axis_s2mm_tready,
     m_axi_s2mm_awburst,
@@ -11673,6 +11682,7 @@ module arm_design_axi_dma_0_1_axi_datamover_s2mm_full_wrap
         .sig_wsc2stat_status_valid(sig_wsc2stat_status_valid));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_s2mm_realign" *) 
 module arm_design_axi_dma_0_1_axi_datamover_s2mm_realign
    (out,
     FIFO_Full_reg,
@@ -11934,6 +11944,7 @@ module arm_design_axi_dma_0_1_axi_datamover_s2mm_realign
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_s2mm_scatter" *) 
 module arm_design_axi_dma_0_1_axi_datamover_s2mm_scatter
    (out,
     sig_scatter2drc_cmd_ready,
@@ -13843,6 +13854,7 @@ module arm_design_axi_dma_0_1_axi_datamover_s2mm_scatter
         .R(sig_eop_sent_reg0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_sfifo_autord" *) 
 module arm_design_axi_dma_0_1_axi_datamover_sfifo_autord
    (dout,
     empty,
@@ -14410,6 +14422,7 @@ module arm_design_axi_dma_0_1_axi_datamover_sfifo_autord__parameterized0
         .O(\sig_data_skid_reg[67]_i_2_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_skid2mm_buf" *) 
 module arm_design_axi_dma_0_1_axi_datamover_skid2mm_buf
    (out,
     sig_s_ready_out_reg_0,
@@ -16169,6 +16182,7 @@ module arm_design_axi_dma_0_1_axi_datamover_skid2mm_buf
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_skid_buf" *) 
 module arm_design_axi_dma_0_1_axi_datamover_skid_buf
    (out,
     s_axis_s2mm_tready,
@@ -20031,6 +20045,7 @@ module arm_design_axi_dma_0_1_axi_datamover_skid_buf__parameterized0
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_slice" *) 
 module arm_design_axi_dma_0_1_axi_datamover_slice
    (slice_insert_valid,
     E,
@@ -20555,6 +20570,7 @@ module arm_design_axi_dma_0_1_axi_datamover_slice
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_strb_gen2" *) 
 module arm_design_axi_dma_0_1_axi_datamover_strb_gen2
    (D,
     out);
@@ -20612,6 +20628,7 @@ module arm_design_axi_dma_0_1_axi_datamover_strb_gen2
         .O(D[5]));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_v5_1_37_srl_fifo" *) 
 module arm_design_axi_dma_0_1_axi_datamover_v5_1_37_srl_fifo
    (sig_addr_posted_cntr_reg_3_sp_1,
     Q,
@@ -23944,6 +23961,7 @@ module arm_design_axi_dma_0_1_axi_datamover_v5_1_37_srl_fifo__parameterized4
         .O(FIFO_Full_reg_1));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_wr_status_cntl" *) 
 module arm_design_axi_dma_0_1_axi_datamover_wr_status_cntl
    (FIFO_Full_reg,
     sig_wsc2stat_status_valid,
@@ -24585,6 +24603,7 @@ module arm_design_axi_dma_0_1_axi_datamover_wr_status_cntl
         .R(\addr_i_reg[3] ));
 endmodule
 
+(* ORIG_REF_NAME = "axi_datamover_wrdata_cntl" *) 
 module arm_design_axi_dma_0_1_axi_datamover_wrdata_cntl
    (FIFO_Full_reg,
     sig_next_calc_error_reg,
@@ -26042,7 +26061,7 @@ endmodule
 (* C_PRMRY_IS_ACLK_ASYNC = "0" *) (* C_S2MM_BURST_SIZE = "256" *) (* C_SG_INCLUDE_STSCNTRL_STRM = "0" *) 
 (* C_SG_LENGTH_WIDTH = "26" *) (* C_SG_USE_STSAPP_LENGTH = "0" *) (* C_S_AXIS_S2MM_STS_TDATA_WIDTH = "32" *) 
 (* C_S_AXIS_S2MM_TDATA_WIDTH = "64" *) (* C_S_AXI_LITE_ADDR_WIDTH = "10" *) (* C_S_AXI_LITE_DATA_WIDTH = "32" *) 
-(* downgradeipidentifiedwarnings = "yes" *) 
+(* ORIG_REF_NAME = "axi_dma" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module arm_design_axi_dma_0_1_axi_dma
    (s_axi_lite_aclk,
     m_axi_sg_aclk,
@@ -26897,6 +26916,7 @@ module arm_design_axi_dma_0_1_axi_dma
         .\syncstages_ff_reg[3] (axi_lite_reset_n));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_lite_if" *) 
 module arm_design_axi_dma_0_1_axi_dma_lite_if
    (s_axi_lite_awready,
     s_axi_lite_arready,
@@ -28137,6 +28157,7 @@ module arm_design_axi_dma_0_1_axi_dma_lite_if
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_reg_module" *) 
 module arm_design_axi_dma_0_1_axi_dma_reg_module
    (s_axi_lite_awready,
     s_axi_lite_arready,
@@ -28405,6 +28426,7 @@ module arm_design_axi_dma_0_1_axi_dma_reg_module
         .O(strm_valid_int_cdc_to));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_register_s2mm" *) 
 module arm_design_axi_dma_0_1_axi_dma_register_s2mm
    (s2mm_length_wren,
     \dmacr_i_reg[0]_0 ,
@@ -29580,6 +29602,7 @@ module arm_design_axi_dma_0_1_axi_dma_register_s2mm
         .O(soft_reset_re0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_reset" *) 
 module arm_design_axi_dma_0_1_axi_dma_reset
    (out,
     \GNE_SYNC_RESET.prmry_resetn_reg_0 ,
@@ -29884,6 +29907,7 @@ module arm_design_axi_dma_0_1_axi_dma_reset
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_rst_module" *) 
 module arm_design_axi_dma_0_1_axi_dma_rst_module
    (out,
     \GNE_SYNC_RESET.prmry_resetn_reg ,
@@ -30004,6 +30028,7 @@ module arm_design_axi_dma_0_1_axi_dma_rst_module
         .O(SR));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_s2mm_cmdsts_if" *) 
 module arm_design_axi_dma_0_1_axi_dma_s2mm_cmdsts_if
    (s2mm_smpl_slverr_set,
     s2mm_smpl_decerr_set,
@@ -30614,6 +30639,7 @@ module arm_design_axi_dma_0_1_axi_dma_s2mm_cmdsts_if
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_s2mm_mngr" *) 
 module arm_design_axi_dma_0_1_axi_dma_s2mm_mngr
    (s2mm_smpl_slverr_set,
     s2mm_smpl_decerr_set,
@@ -30826,6 +30852,7 @@ module arm_design_axi_dma_0_1_axi_dma_s2mm_mngr
         .R(halted1));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_s2mm_sts_mngr" *) 
 module arm_design_axi_dma_0_1_axi_dma_s2mm_sts_mngr
    (axi_dma_tstvec,
     s2mm_halted_set_reg_0,
@@ -30923,6 +30950,7 @@ module arm_design_axi_dma_0_1_axi_dma_s2mm_sts_mngr
         .R(halted1));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_smple_sm" *) 
 module arm_design_axi_dma_0_1_axi_dma_smple_sm
    (s2mm_cmnd_wr,
     s2mm_sts_received_clr,
@@ -31476,6 +31504,7 @@ module arm_design_axi_dma_0_1_axi_dma_smple_sm
         .O(sts_received_clr_reg_0));
 endmodule
 
+(* ORIG_REF_NAME = "axi_dma_sofeof_gen" *) 
 module arm_design_axi_dma_0_1_axi_dma_sofeof_gen
    (axi_dma_tstvec,
     SR,
@@ -31613,8 +31642,9 @@ module arm_design_axi_dma_0_1_axi_dma_sofeof_gen
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "4" *) (* INIT = "0" *) 
-(* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SYNC_RST" *) 
+(* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_sync_rst" *) (* SIM_ASSERT_CHK = "0" *) 
+(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
+(* xpm_cdc = "SYNC_RST" *) 
 module arm_design_axi_dma_0_1_xpm_cdc_sync_rst
    (src_rst,
     dest_clk,
@@ -33318,18 +33348,19 @@ endmodule
 (* FG_EQ_ASYM_DOUT = "1'b0" *) (* FIFO_MEMORY_TYPE = "0" *) (* FIFO_MEM_TYPE = "0" *) 
 (* FIFO_READ_DEPTH = "16" *) (* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "224" *) 
 (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) (* FULL_RST_VAL = "1'b1" *) 
-(* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "11" *) (* PE_THRESH_MIN = "5" *) 
-(* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "11" *) (* PF_THRESH_MIN = "5" *) 
-(* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "5" *) 
-(* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
-(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "14" *) (* READ_MODE = "1" *) 
-(* READ_MODE_LL = "1" *) (* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "14" *) 
-(* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) 
-(* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "4" *) 
-(* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) (* invalid = "0" *) 
-(* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* ORIG_REF_NAME = "xpm_fifo_base" *) (* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "11" *) 
+(* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "11" *) 
+(* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) 
+(* RD_DATA_COUNT_WIDTH = "5" *) (* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "2" *) 
+(* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "14" *) 
+(* READ_MODE = "1" *) (* READ_MODE_LL = "1" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "14" *) (* WR_DATA_COUNT_WIDTH = "5" *) (* WR_DC_WIDTH_EXT = "5" *) 
+(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "4" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) 
+(* stage2_valid = "1" *) 
 module arm_design_axi_dma_0_1_xpm_fifo_base
    (sleep,
     rst,
@@ -34152,6 +34183,7 @@ module arm_design_axi_dma_0_1_xpm_fifo_base__parameterized0
         .wr_en(wr_en));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module arm_design_axi_dma_0_1_xpm_fifo_reg_bit
    (rst_d1,
     clr_full,
@@ -34259,6 +34291,7 @@ module arm_design_axi_dma_0_1_xpm_fifo_reg_bit_2
         .O(clr_full));
 endmodule
 
+(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module arm_design_axi_dma_0_1_xpm_fifo_rst
    (E,
     Q,
@@ -34431,12 +34464,12 @@ endmodule
 (* CASCADE_HEIGHT = "0" *) (* DOUT_RESET_VALUE = "0" *) (* ECC_MODE = "no_ecc" *) 
 (* EN_ADV_FEATURE_SYNC = "16'b0001111100011111" *) (* EN_SIM_ASSERT_ERR = "warning" *) (* FIFO_MEMORY_TYPE = "auto" *) 
 (* FIFO_READ_LATENCY = "0" *) (* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "1" *) 
-(* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "1" *) 
-(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) (* P_READ_MODE = "1" *) 
-(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "5" *) (* READ_DATA_WIDTH = "14" *) 
-(* READ_MODE = "fwft" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "14" *) (* WR_DATA_COUNT_WIDTH = "5" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
+(* ORIG_REF_NAME = "xpm_fifo_sync" *) (* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) 
+(* P_COMMON_CLOCK = "1" *) (* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "0" *) 
+(* P_READ_MODE = "1" *) (* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "5" *) 
+(* READ_DATA_WIDTH = "14" *) (* READ_MODE = "fwft" *) (* SIM_ASSERT_CHK = "0" *) 
+(* USE_ADV_FEATURES = "1F1F" *) (* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "14" *) 
+(* WR_DATA_COUNT_WIDTH = "5" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
 module arm_design_axi_dma_0_1_xpm_fifo_sync
    (sleep,
     rst,
@@ -34851,27 +34884,28 @@ endmodule
 (* ECC_TYPE = "NONE" *) (* IGNORE_INIT_SYNTH = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "0" *) (* MEMORY_SIZE = "224" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "0" *) 
-(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
-(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) (* P_MIN_WIDTH_DATA = "14" *) 
-(* P_MIN_WIDTH_DATA_A = "14" *) (* P_MIN_WIDTH_DATA_B = "14" *) (* P_MIN_WIDTH_DATA_ECC = "14" *) 
-(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "14" *) (* P_NUM_COLS_WRITE_A = "1" *) 
-(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_COL_READ_A = "1" *) (* P_NUM_COL_READ_B = "1" *) 
-(* P_NUM_COL_WRITE_A = "1" *) (* P_NUM_COL_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_READ_COLL_A = "1" *) (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "1" *) (* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) 
-(* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) 
-(* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "14" *) (* P_WIDTH_COL_WRITE_B = "14" *) 
-(* RAM_DECOMP = "auto" *) (* READ_DATA_WIDTH_A = "14" *) (* READ_DATA_WIDTH_B = "14" *) 
-(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
-(* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
-(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
-(* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WRITE_DATA_WIDTH_A = "14" *) (* WRITE_DATA_WIDTH_B = "14" *) (* WRITE_MODE_A = "2" *) 
-(* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "16" *) (* rstb_loop_iter = "16" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
+(* P_ECC_MODE = "0" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
+(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "auto" *) 
+(* P_MIN_WIDTH_DATA = "14" *) (* P_MIN_WIDTH_DATA_A = "14" *) (* P_MIN_WIDTH_DATA_B = "14" *) 
+(* P_MIN_WIDTH_DATA_ECC = "14" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "14" *) 
+(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_COL_READ_A = "1" *) 
+(* P_NUM_COL_READ_B = "1" *) (* P_NUM_COL_WRITE_A = "1" *) (* P_NUM_COL_WRITE_B = "1" *) 
+(* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) 
+(* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_READ_COLL_A = "1" *) (* P_WIDTH_ADDR_LSB_READ_COLL_B = "1" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_COLL_A = "1" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_COLL_B = "1" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
+(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "14" *) 
+(* P_WIDTH_COL_WRITE_B = "14" *) (* RAM_DECOMP = "auto" *) (* READ_DATA_WIDTH_A = "14" *) 
+(* READ_DATA_WIDTH_B = "14" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
+(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
+(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
+(* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
+(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "14" *) (* WRITE_DATA_WIDTH_B = "14" *) 
+(* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "16" *) 
+(* rstb_loop_iter = "16" *) 
 module arm_design_axi_dma_0_1_xpm_memory_base
    (sleep,
     clka,

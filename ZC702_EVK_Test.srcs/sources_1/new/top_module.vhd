@@ -121,6 +121,9 @@ architecture rtl of top_module is
     signal s2mm_state : s2mm_state_t := IDLE;
     
     signal beat_cnt : integer := 0;
+    
+    -- 100 mhz clock 234MB/sec speed
+    -- 150 mhz clock 390MB/sec speed
     constant TOTAL_BEATS : integer := 1048576;--33554432; --1048576; -- 1048576 * 8 = 8Mbyte write gives 420 Mbtes/sec speed
     
 begin
@@ -275,7 +278,14 @@ begin
                     -- SEND: stream normal beats until the second-last beat
                     ----------------------------------------------------------------
                     when SEND =>
+                        
+                        s_AXIS_S2MM_0_tvalid <= '1';
                         s_AXIS_S2MM_0_tlast <= '0';
+
+                        -- when i sent 64 bit with increment i saw 0x00000000 between counters.
+                        -- ddr is 32 bit so 64 bit is written to 2 address that is why.
+                        -- to check that i have send fix 32 bit at msb
+                        s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
     
                         if s_AXIS_S2MM_0_tready = '1' then
                         
@@ -284,9 +294,6 @@ begin
                             end if;
                             
                             led_7 <= not led_7;
-
-                            s_AXIS_S2MM_0_tvalid <= '1';
-                            s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
     
                             if beat_cnt = TOTAL_BEATS - 2 then
                                 beat_cnt   <= beat_cnt + 1;
@@ -295,8 +302,6 @@ begin
                                 beat_cnt <= beat_cnt + 1;
                             end if;
     
-                        else
-                            s_AXIS_S2MM_0_tvalid <= '0';
                         end if;
     
                     ----------------------------------------------------------------
@@ -304,16 +309,14 @@ begin
                     ----------------------------------------------------------------
                     when LAST =>
                         s_AXIS_S2MM_0_tlast <= '1';
-    
+                        s_AXIS_S2MM_0_tvalid <= '1';
+                        s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
+                        
                         if s_AXIS_S2MM_0_tready = '1' then
-                            s_AXIS_S2MM_0_tvalid <= '1';
-                            s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
-                            s2mm_state           <= DONE;
-                            
-                            end_time <= cycle_counter;
-                            
-                        else
-                            s_AXIS_S2MM_0_tvalid <= '0';
+    
+                            s2mm_state  <= DONE;                            
+                            end_time    <= cycle_counter;
+
                         end if;
                         
                         if led_counter = 100000000 then
@@ -344,6 +347,120 @@ begin
             end if;
         end if;
     end process;
+
+-- This process works as well. Tvalid is not continuout speed is a bit slower
+--    -- Control DMA to send data
+--    process(s_fclk, s_ps_reset_n)
+--    variable led_counter : integer range 0 to 1000000000 := 0;
+--    begin
+--        if rising_edge(s_fclk) then
+--            if s_ps_reset_n = '0' then
+    
+--                s_AXIS_S2MM_0_tvalid <= '0';
+--                s_AXIS_S2MM_0_tlast  <= '0';
+--                s_AXIS_S2MM_0_tkeep  <= (others => '1');
+--                s_AXIS_S2MM_0_tdata  <= (others => '0');
+    
+--                s2mm_state           <= IDLE;
+--                beat_cnt             <= 0;
+--                led_7                <= '0';
+--                led_counter          := 0;
+    
+--            else
+    
+--                case s2mm_state is
+    
+--                    ----------------------------------------------------------------
+--                    -- IDLE: bus is quiet
+--                    ----------------------------------------------------------------
+--                    when IDLE =>
+--                        s_AXIS_S2MM_0_tvalid <= '0';
+--                        s_AXIS_S2MM_0_tlast  <= '0';
+--                        beat_cnt             <= 0;
+    
+--                        if s_gpio_sw_o(0) = '1' then
+--                            -- Start automatically (can replace with condition later)
+--                            s2mm_state <= SEND;
+--                        end if;
+    
+--                    ----------------------------------------------------------------
+--                    -- SEND: stream normal beats until the second-last beat
+--                    ----------------------------------------------------------------
+--                    when SEND =>
+--                        s_AXIS_S2MM_0_tlast <= '0';
+    
+--                        if s_AXIS_S2MM_0_tready = '1' then
+                        
+--                            if beat_cnt = 0 then
+--                                start_time <= cycle_counter;
+--                            end if;
+                            
+--                            led_7 <= not led_7;
+
+--                            s_AXIS_S2MM_0_tvalid <= '1';
+--                            -- when i sent 64 bit with increment i saw 0x00000000 between counters.
+--                            -- ddr is 32 bit so 64 bit is written to 2 address that is why.
+--                            -- to check that i have send fix 32 bit at msb
+--                            --s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
+--                            s_AXIS_S2MM_0_tdata <= x"01234567" & std_logic_vector(to_unsigned(beat_cnt, 32));
+
+    
+--                            if beat_cnt = TOTAL_BEATS - 2 then
+--                                beat_cnt   <= beat_cnt + 1;
+--                                s2mm_state <= LAST;
+--                            else
+--                                beat_cnt <= beat_cnt + 1;
+--                            end if;
+    
+--                        else
+--                            s_AXIS_S2MM_0_tvalid <= '0';
+--                        end if;
+    
+--                    ----------------------------------------------------------------
+--                    -- LAST: send the final beat with TLAST=1
+--                    ----------------------------------------------------------------
+--                    when LAST =>
+--                        s_AXIS_S2MM_0_tlast <= '1';
+    
+--                        if s_AXIS_S2MM_0_tready = '1' then
+--                            s_AXIS_S2MM_0_tvalid <= '1';
+--                            s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
+--                            s2mm_state           <= DONE;
+                            
+--                            end_time <= cycle_counter;
+                            
+--                        else
+--                            s_AXIS_S2MM_0_tvalid <= '0';
+--                        end if;
+                        
+--                        if led_counter = 100000000 then
+--                            led_6 <= not led_6; -- it does not stay here checked with led
+--                            led_counter := 0;
+--                        else
+--                            led_counter := led_counter + 1;
+--                        end if;
+    
+--                    ----------------------------------------------------------------
+--                    -- DONE: end of burst
+--                    ----------------------------------------------------------------
+--                    when DONE =>
+--                        s_AXIS_S2MM_0_tvalid <= '0';
+--                        s_AXIS_S2MM_0_tlast  <= '0';
+
+--                        -- stay here until reset, or set <= IDLE for continuous bursts
+                        
+--                        if led_counter = 100000000 then
+--                            led_7 <= not led_7;  -- code enters here no problem
+--                            led_counter := 0;
+--                        else
+--                            led_counter := led_counter + 1;
+--                        end if;
+    
+--                end case;
+    
+--            end if;
+--        end if;
+--    end process;
 
     
     

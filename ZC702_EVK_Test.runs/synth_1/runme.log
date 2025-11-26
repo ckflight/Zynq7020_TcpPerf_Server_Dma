@@ -8,16 +8,16 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Tue Nov 25 11:15:45 2025
+  **** Start of session at: Wed Nov 26 14:22:06 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source top_module.tcl -notrace
-create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 573.789 ; gain = 217.363
+create_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 577.445 ; gain = 223.430
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.2/Vivado/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 600.715 ; gain = 26.926
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 603.414 ; gain = 25.969
 Command: read_checkpoint -auto_incremental -incremental C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/utils_1/imports/synth_1/top_module.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/utils_1/imports/synth_1/top_module.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -30,60 +30,60 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13380
+INFO: [Synth 8-7075] Helper process launched with PID 14396
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1402.406 ; gain = 541.023
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1402.066 ; gain = 541.395
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_module' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:50]
-INFO: [Synth 8-3491] module 'arm_design_wrapper' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/hdl/arm_design_wrapper.vhd:15' bound to instance 'arm_design_i' of component 'arm_design_wrapper' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:130]
+INFO: [Synth 8-3491] module 'arm_design_wrapper' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/hdl/arm_design_wrapper.vhd:15' bound to instance 'arm_design_i' of component 'arm_design_wrapper' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:133]
 INFO: [Synth 8-638] synthesizing module 'arm_design_wrapper' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/hdl/arm_design_wrapper.vhd:51]
 INFO: [Synth 8-3491] module 'arm_design' declared at 'c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:344' bound to instance 'arm_design_i' of component 'arm_design' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/hdl/arm_design_wrapper.vhd:88]
 INFO: [Synth 8-638] synthesizing module 'arm_design' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:384]
-WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:502]
-INFO: [Synth 8-3491] module 'arm_design_axi_dma_0_1' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_dma_0_1_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'arm_design_axi_dma_0_1' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:973]
-INFO: [Synth 8-638] synthesizing module 'arm_design_axi_dma_0_1' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_dma_0_1_stub.vhdl:61]
-INFO: [Synth 8-3491] module 'arm_design_axi_gpio_0_1' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_0_1_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'arm_design_axi_gpio_0_1' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1018]
-INFO: [Synth 8-638] synthesizing module 'arm_design_axi_gpio_0_1' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_0_1_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'arm_design_axi_gpio_1_1' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_1_1_stub.vhdl:6' bound to instance 'axi_gpio_1' of component 'arm_design_axi_gpio_1_1' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1041]
-INFO: [Synth 8-638] synthesizing module 'arm_design_axi_gpio_1_1' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_1_1_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'arm_design_axi_gpio_2_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_2_0_stub.vhdl:6' bound to instance 'axi_gpio_2' of component 'arm_design_axi_gpio_2_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1064]
-INFO: [Synth 8-638] synthesizing module 'arm_design_axi_gpio_2_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_2_0_stub.vhdl:38]
+WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:503]
+INFO: [Synth 8-3491] module 'arm_design_axi_dma_0_1' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_dma_0_1_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'arm_design_axi_dma_0_1' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:974]
+INFO: [Synth 8-638] synthesizing module 'arm_design_axi_dma_0_1' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_dma_0_1_stub.vhdl:61]
+INFO: [Synth 8-3491] module 'arm_design_axi_gpio_0_1' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_0_1_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'arm_design_axi_gpio_0_1' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1019]
+INFO: [Synth 8-638] synthesizing module 'arm_design_axi_gpio_0_1' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_0_1_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'arm_design_axi_gpio_1_1' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_1_1_stub.vhdl:6' bound to instance 'axi_gpio_1' of component 'arm_design_axi_gpio_1_1' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1042]
+INFO: [Synth 8-638] synthesizing module 'arm_design_axi_gpio_1_1' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_1_1_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'arm_design_axi_gpio_2_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_2_0_stub.vhdl:6' bound to instance 'axi_gpio_2' of component 'arm_design_axi_gpio_2_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1065]
+INFO: [Synth 8-638] synthesizing module 'arm_design_axi_gpio_2_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_gpio_2_0_stub.vhdl:38]
 INFO: [Synth 8-638] synthesizing module 'arm_design_axi_mem_intercon_2' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:296]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1T941S1' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:58]
-INFO: [Synth 8-3491] module 'arm_design_axi_mem_intercon_imp_auto_pc_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'arm_design_axi_mem_intercon_imp_auto_pc_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:163]
-INFO: [Synth 8-638] synthesizing module 'arm_design_axi_mem_intercon_imp_auto_pc_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_auto_pc_0_stub.vhdl:57]
-INFO: [Synth 8-3491] module 'arm_design_axi_mem_intercon_imp_s00_data_fifo_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_s00_data_fifo_0_stub.vhdl:6' bound to instance 's00_data_fifo' of component 'arm_design_axi_mem_intercon_imp_s00_data_fifo_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:205]
-INFO: [Synth 8-638] synthesizing module 'arm_design_axi_mem_intercon_imp_s00_data_fifo_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_s00_data_fifo_0_stub.vhdl:56]
+INFO: [Synth 8-3491] module 'arm_design_axi_mem_intercon_imp_auto_pc_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'arm_design_axi_mem_intercon_imp_auto_pc_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'arm_design_axi_mem_intercon_imp_auto_pc_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_auto_pc_0_stub.vhdl:57]
+INFO: [Synth 8-3491] module 'arm_design_axi_mem_intercon_imp_s00_data_fifo_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_s00_data_fifo_0_stub.vhdl:6' bound to instance 's00_data_fifo' of component 'arm_design_axi_mem_intercon_imp_s00_data_fifo_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'arm_design_axi_mem_intercon_imp_s00_data_fifo_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_mem_intercon_imp_s00_data_fifo_0_stub.vhdl:56]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1T941S1' (0#1) [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'arm_design_axi_mem_intercon_2' (0#1) [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:296]
-INFO: [Synth 8-3491] module 'arm_design_axi_smc_2' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_smc_2_stub.vhdl:6' bound to instance 'axi_smc' of component 'arm_design_axi_smc_2' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1130]
-INFO: [Synth 8-638] synthesizing module 'arm_design_axi_smc_2' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_axi_smc_2_stub.vhdl:134]
-INFO: [Synth 8-3491] module 'arm_design_processing_system7_0_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'arm_design_processing_system7_0_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1249]
-INFO: [Synth 8-638] synthesizing module 'arm_design_processing_system7_0_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_processing_system7_0_0_stub.vhdl:131]
-INFO: [Synth 8-3491] module 'arm_design_rst_ps7_0_100M_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_rst_ps7_0_100M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M' of component 'arm_design_rst_ps7_0_100M_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1365]
-INFO: [Synth 8-638] synthesizing module 'arm_design_rst_ps7_0_100M_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-12752-DESKTOP-BEUFM6D/realtime/arm_design_rst_ps7_0_100M_0_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'arm_design_axi_smc_2' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_smc_2_stub.vhdl:6' bound to instance 'axi_smc' of component 'arm_design_axi_smc_2' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1131]
+INFO: [Synth 8-638] synthesizing module 'arm_design_axi_smc_2' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_axi_smc_2_stub.vhdl:134]
+INFO: [Synth 8-3491] module 'arm_design_processing_system7_0_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'arm_design_processing_system7_0_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1250]
+INFO: [Synth 8-638] synthesizing module 'arm_design_processing_system7_0_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_processing_system7_0_0_stub.vhdl:132]
+INFO: [Synth 8-3491] module 'arm_design_rst_ps7_0_100M_0' declared at 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_rst_ps7_0_100M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M' of component 'arm_design_rst_ps7_0_100M_0' [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:1367]
+INFO: [Synth 8-638] synthesizing module 'arm_design_rst_ps7_0_100M_0' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/.Xil/Vivado-15048-DESKTOP-BEUFM6D/realtime/arm_design_rst_ps7_0_100M_0_stub.vhdl:28]
 INFO: [Synth 8-256] done synthesizing module 'arm_design' (0#1) [c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/synth/arm_design.vhd:384]
 INFO: [Synth 8-256] done synthesizing module 'arm_design_wrapper' (0#1) [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/hdl/arm_design_wrapper.vhd:51]
 	Parameter DIFF_TERM bound to: 1 - type: bool 
 	Parameter IBUF_LOW_PWR bound to: 0 - type: bool 
-INFO: [Synth 8-113] binding component instance 'sysclk_buf' to cell 'IBUFGDS' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:168]
-WARNING: [Synth 8-614] signal 's_ps_reset_n' is read in the process but is not in the sensitivity list [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:182]
+INFO: [Synth 8-113] binding component instance 'sysclk_buf' to cell 'IBUFGDS' [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:171]
+WARNING: [Synth 8-614] signal 's_ps_reset_n' is read in the process but is not in the sensitivity list [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:185]
 INFO: [Synth 8-256] done synthesizing module 'top_module' (0#1) [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.srcs/sources_1/new/top_module.vhd:50]
 WARNING: [Synth 8-7129] Port ACLK in module arm_design_axi_mem_intercon_2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module arm_design_axi_mem_intercon_2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1535.805 ; gain = 674.422
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1534.504 ; gain = 673.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1535.805 ; gain = 674.422
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1534.504 ; gain = 673.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1535.805 ; gain = 674.422
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1534.504 ; gain = 673.832
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1535.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1534.504 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -218,32 +218,32 @@ Parsing XDC File [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_T
 Finished Parsing XDC File [C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.633 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1594.086 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IBUFGDS => IBUFDS: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1599.633 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'arm_design_i/arm_design_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '7.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'arm_design_i/arm_design_i/axi_gpio_1' at clock pin 's_axi_aclk' is different from the actual clock period '7.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'arm_design_i/arm_design_i/axi_gpio_2' at clock pin 's_axi_aclk' is different from the actual clock period '7.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1594.086 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'arm_design_i/arm_design_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '6.666', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'arm_design_i/arm_design_i/axi_gpio_1' at clock pin 's_axi_aclk' is different from the actual clock period '6.666', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'arm_design_i/arm_design_i/axi_gpio_2' at clock pin 's_axi_aclk' is different from the actual clock period '6.666', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1602.309 ; gain = 740.926
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1595.035 ; gain = 734.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1602.309 ; gain = 740.926
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1595.035 ; gain = 734.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1602.309 ; gain = 740.926
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1595.035 ; gain = 734.363
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 's2mm_state_reg' in module 'top_module'
 ---------------------------------------------------------------------------------------------------
@@ -256,7 +256,7 @@ INFO: [Synth 8-802] inferred FSM for state register 's2mm_state_reg' in module '
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 's2mm_state_reg' using encoding 'one-hot' in module 'top_module'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1602.309 ; gain = 740.926
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1595.035 ; gain = 734.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -274,7 +274,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 10    
 +---Muxes : 
 	   4 Input   32 Bit        Muxes := 1     
-	   4 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -293,25 +293,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7129] Port ACLK in module arm_design_axi_mem_intercon_2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ARESETN in module arm_design_axi_mem_intercon_2 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1602.309 ; gain = 740.926
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1595.035 ; gain = 734.363
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1737.477 ; gain = 876.094
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1734.770 ; gain = 874.098
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1763.914 ; gain = 902.531
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1761.098 ; gain = 900.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1763.914 ; gain = 902.531
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1761.098 ; gain = 900.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -329,37 +329,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -396,11 +396,11 @@ Report Cell Usage:
 |10    |BUFG                                                 |     1|
 |11    |CARRY4                                               |    31|
 |12    |LUT1                                                 |     7|
-|13    |LUT2                                                 |     4|
-|14    |LUT3                                                 |    31|
-|15    |LUT4                                                 |    49|
-|16    |LUT5                                                 |    38|
-|17    |LUT6                                                 |    10|
+|13    |LUT2                                                 |     6|
+|14    |LUT3                                                 |    30|
+|15    |LUT4                                                 |    48|
+|16    |LUT5                                                 |    18|
+|17    |LUT6                                                 |    30|
 |18    |FDCE                                                 |    27|
 |19    |FDRE                                                 |   203|
 |20    |FDSE                                                 |     2|
@@ -408,28 +408,28 @@ Report Cell Usage:
 |22    |OBUF                                                 |     8|
 +------+-----------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 2000.383 ; gain = 1072.496
-Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2000.383 ; gain = 1139.000
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:54 . Memory (MB): peak = 1996.500 ; gain = 1075.297
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1996.500 ; gain = 1135.828
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 2000.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 1996.500 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2013.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2009.305 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IBUFGDS => IBUFDS: 1 instance 
 
-Synth Design complete | Checksum: 9dbda45c
+Synth Design complete | Checksum: e6e9d0b9
 INFO: [Common 17-83] Releasing license: Synthesis
 60 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:09 . Memory (MB): peak = 2013.188 ; gain = 1384.438
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2013.188 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:13 . Memory (MB): peak = 2009.305 ; gain = 1377.988
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2009.305 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.runs/synth_1/top_module.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 25 11:17:19 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 26 14:23:46 2025...

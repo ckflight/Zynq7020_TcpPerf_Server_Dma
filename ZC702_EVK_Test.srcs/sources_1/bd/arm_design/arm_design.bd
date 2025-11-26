@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x13499D26709E6DED",
+      "boundary_crc": "0x13499D2683CF94A4",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../ZC702_EVK_Test.gen/sources_1/bd/arm_design",
       "name": "arm_design",
@@ -238,8 +238,13 @@
         "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
         "vlnv": "xilinx.com:interface:axis_rtl:1.0",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "arm_design_processing_system7_0_0_FCLK_CLK0",
+            "value_src": "default_prop"
+          },
           "FREQ_HZ": {
-            "value": "142857132"
+            "value": "150000000",
+            "value_src": "user_prop"
           },
           "HAS_TKEEP": {
             "value": "1"
@@ -332,12 +337,15 @@
         "type": "clk",
         "direction": "O",
         "parameters": {
+          "ASSOCIATED_BUSIF": {
+            "value": "S_AXIS_S2MM_0"
+          },
           "CLK_DOMAIN": {
             "value": "arm_design_processing_system7_0_0_FCLK_CLK0",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "142857132",
+            "value": "150000000",
             "value_src": "user_prop"
           },
           "FREQ_TOLERANCE_HZ": {
@@ -368,7 +376,7 @@
             "value": "666.666687"
           },
           "PCW_ACT_CAN_PERIPHERAL_FREQMHZ": {
-            "value": "23.809523"
+            "value": "23.809525"
           },
           "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
             "value": "10.158730"
@@ -380,7 +388,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "142.857132"
+            "value": "150.000000"
           },
           "PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ": {
             "value": "10.000000"
@@ -392,10 +400,10 @@
             "value": "10.000000"
           },
           "PCW_ACT_PCAP_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "187.500000"
           },
           "PCW_ACT_QSPI_PERIPHERAL_FREQMHZ": {
-            "value": "200.000000"
+            "value": "187.500000"
           },
           "PCW_ACT_SDIO_PERIPHERAL_FREQMHZ": {
             "value": "50.000000"
@@ -452,7 +460,7 @@
             "value": "1"
           },
           "PCW_CLK0_FREQ": {
-            "value": "142857132"
+            "value": "150000000"
           },
           "PCW_CLK1_FREQ": {
             "value": "10000000"
@@ -463,8 +471,53 @@
           "PCW_CLK3_FREQ": {
             "value": "10000000"
           },
+          "PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": {
+            "value": "15"
+          },
+          "PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": {
+            "value": "2"
+          },
+          "PCW_DDR_PORT0_HPR_ENABLE": {
+            "value": "0"
+          },
+          "PCW_DDR_PORT1_HPR_ENABLE": {
+            "value": "0"
+          },
+          "PCW_DDR_PORT2_HPR_ENABLE": {
+            "value": "0"
+          },
+          "PCW_DDR_PORT3_HPR_ENABLE": {
+            "value": "0"
+          },
+          "PCW_DDR_PRIORITY_READPORT_0": {
+            "value": "Low"
+          },
+          "PCW_DDR_PRIORITY_READPORT_1": {
+            "value": "Low"
+          },
+          "PCW_DDR_PRIORITY_READPORT_2": {
+            "value": "Low"
+          },
+          "PCW_DDR_PRIORITY_READPORT_3": {
+            "value": "Low"
+          },
+          "PCW_DDR_PRIORITY_WRITEPORT_0": {
+            "value": "Low"
+          },
+          "PCW_DDR_PRIORITY_WRITEPORT_1": {
+            "value": "Low"
+          },
+          "PCW_DDR_PRIORITY_WRITEPORT_2": {
+            "value": "Low"
+          },
+          "PCW_DDR_PRIORITY_WRITEPORT_3": {
+            "value": "High"
+          },
           "PCW_DDR_RAM_HIGHADDR": {
             "value": "0x3FFFFFFF"
+          },
+          "PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": {
+            "value": "2"
           },
           "PCW_ENET0_ENET0_IO": {
             "value": "MIO 16 .. 27"
@@ -527,7 +580,7 @@
             "value": "0"
           },
           "PCW_FPGA0_PERIPHERAL_FREQMHZ": {
-            "value": "150"
+            "value": "155"
           },
           "PCW_FPGA_FCLK0_ENABLE": {
             "value": "1"
@@ -561,6 +614,9 @@
           },
           "PCW_I2C_RESET_SELECT": {
             "value": "Share reset pin"
+          },
+          "PCW_IRQ_F2P_INTR": {
+            "value": "1"
           },
           "PCW_MIO_0_IOTYPE": {
             "value": "LVCMOS 1.8V"
@@ -1133,6 +1189,9 @@
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
             "value": "533.333374"
           },
+          "PCW_UIPARAM_DDR_ADV_ENABLE": {
+            "value": "1"
+          },
           "PCW_UIPARAM_DDR_BL": {
             "value": "8"
           },
@@ -1207,6 +1266,9 @@
           },
           "PCW_USE_DMA1": {
             "value": "0"
+          },
+          "PCW_USE_FABRIC_INTERRUPT": {
+            "value": "1"
           },
           "PCW_USE_S_AXI_GP0": {
             "value": "0"
@@ -2057,6 +2119,12 @@
       }
     },
     "nets": {
+      "axi_dma_0_s2mm_introut": {
+        "ports": [
+          "axi_dma_0/s2mm_introut",
+          "processing_system7_0/IRQ_F2P"
+        ]
+      },
       "processing_system7_0_FCLK_CLK1": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",

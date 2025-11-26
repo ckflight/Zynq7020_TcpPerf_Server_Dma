@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Sun Nov 23 16:00:04 2025
+-- Date        : Wed Nov 26 13:58:06 2025
 -- Host        : DESKTOP-BEUFM6D running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top arm_design_rst_ps7_0_100M_0 -prefix
---               arm_design_rst_ps7_0_100M_0_ arm_design_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/ip/arm_design_rst_ps7_0_100M_0/arm_design_rst_ps7_0_100M_0_sim_netlist.vhdl
 -- Design      : arm_design_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,6 +22,8 @@ entity arm_design_rst_ps7_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of arm_design_rst_ps7_0_100M_0_upcnt_n : entity is "upcnt_n";
 end arm_design_rst_ps7_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of arm_design_rst_ps7_0_100M_0_upcnt_n is
@@ -188,6 +190,8 @@ entity arm_design_rst_ps7_0_100M_0_xpm_cdc_single is
   attribute DEST_SYNC_FF of arm_design_rst_ps7_0_100M_0_xpm_cdc_single : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of arm_design_rst_ps7_0_100M_0_xpm_cdc_single : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of arm_design_rst_ps7_0_100M_0_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of arm_design_rst_ps7_0_100M_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -358,6 +362,8 @@ entity arm_design_rst_ps7_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of arm_design_rst_ps7_0_100M_0_lpf : entity is "lpf";
 end arm_design_rst_ps7_0_100M_0_lpf;
 
 architecture STRUCTURE of arm_design_rst_ps7_0_100M_0_lpf is
@@ -601,6 +607,8 @@ entity arm_design_rst_ps7_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of arm_design_rst_ps7_0_100M_0_sequence_psr : entity is "sequence_psr";
 end arm_design_rst_ps7_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of arm_design_rst_ps7_0_100M_0_sequence_psr is
@@ -939,6 +947,8 @@ entity arm_design_rst_ps7_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of arm_design_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of arm_design_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of arm_design_rst_ps7_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end arm_design_rst_ps7_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of arm_design_rst_ps7_0_100M_0_proc_sys_reset is
@@ -1108,7 +1118,7 @@ architecture STRUCTURE of arm_design_rst_ps7_0_100M_0 is
   attribute x_interface_parameter of mb_reset : signal is "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0";
   attribute x_interface_info of slowest_sync_clk : signal is "xilinx.com:signal:clock:1.0 clock CLK";
   attribute x_interface_mode of slowest_sync_clk : signal is "slave clock";
-  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 142857132, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of slowest_sync_clk : signal is "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of bus_struct_reset : signal is "xilinx.com:signal:reset:1.0 bus_struct_reset RST";
   attribute x_interface_mode of bus_struct_reset : signal is "master bus_struct_reset";
   attribute x_interface_parameter of bus_struct_reset : signal is "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0";

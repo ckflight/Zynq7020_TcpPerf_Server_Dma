@@ -2,10 +2,10 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Sun Nov 23 16:00:04 2025
+// Date        : Wed Nov 26 13:58:06 2025
 // Host        : DESKTOP-BEUFM6D running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top arm_design_rst_ps7_0_100M_0 -prefix
-//               arm_design_rst_ps7_0_100M_0_ arm_design_rst_ps7_0_100M_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               c:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK_Test/ZC702_EVK_Test.gen/sources_1/bd/arm_design/ip/arm_design_rst_ps7_0_100M_0/arm_design_rst_ps7_0_100M_0_sim_netlist.v
 // Design      : arm_design_rst_ps7_0_100M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,7 +26,7 @@ module arm_design_rst_ps7_0_100M_0
     peripheral_reset,
     interconnect_aresetn,
     peripheral_aresetn);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) (* x_interface_mode = "slave clock" *) (* x_interface_parameter = "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 142857132, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input slowest_sync_clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) (* x_interface_mode = "slave clock" *) (* x_interface_parameter = "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 150000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN arm_design_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input slowest_sync_clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_mode = "slave ext_reset" *) (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input ext_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 aux_reset RST" *) (* x_interface_mode = "slave aux_reset" *) (* x_interface_parameter = "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aux_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 dbg_reset RST" *) (* x_interface_mode = "slave dbg_reset" *) (* x_interface_parameter = "XIL_INTERFACENAME dbg_reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input mb_debug_sys_rst;
@@ -70,6 +70,7 @@ module arm_design_rst_ps7_0_100M_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "lpf" *) 
 module arm_design_rst_ps7_0_100M_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -260,6 +261,7 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "zynq" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
+(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module arm_design_rst_ps7_0_100M_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -376,6 +378,7 @@ module arm_design_rst_ps7_0_100M_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
+(* ORIG_REF_NAME = "sequence_psr" *) 
 module arm_design_rst_ps7_0_100M_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -616,6 +619,7 @@ module arm_design_rst_ps7_0_100M_0_sequence_psr
         .R(lpf_int));
 endmodule
 
+(* ORIG_REF_NAME = "upcnt_n" *) 
 module arm_design_rst_ps7_0_100M_0_upcnt_n
    (Q,
     seq_clr,
@@ -737,9 +741,9 @@ module arm_design_rst_ps7_0_100M_0_upcnt_n
         .R(clear));
 endmodule
 
-(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
+(* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
+(* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
 module arm_design_rst_ps7_0_100M_0_xpm_cdc_single
    (src_clk,
     src_in,
