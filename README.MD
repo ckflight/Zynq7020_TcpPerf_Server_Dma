@@ -11,7 +11,8 @@
 This project implements a high-performance TCP Perf Server on a Xilinx Zynq-7020.  
 It integrates lwIP RAW TCP networking, AXI DMA high-speed DDR3 streaming, and a custom PL AXI-Stream burst generator — forming a complete high-throughput data pipeline.
 
-The system reaches **~390 MB/s** sustained DDR write throughput at **FCLK0 = 142.857 MHz**, using a **1,048,576-beat × 64-bit AXI-Stream** burst.
+The system reaches **~1200 MB/s** sustained DDR write throughput with dma interrupt at **FCLK0 = 150 MHz**, using a **1,048,576-beat × 64-bit AXI-Stream** burst.
+The system reaches **~420 MB/s** sustained DDR write throughput with polling at **FCLK0 = 142.857 MHz**, using a **1,048,576-beat × 64-bit AXI-Stream** burst.
 
 ---
 
