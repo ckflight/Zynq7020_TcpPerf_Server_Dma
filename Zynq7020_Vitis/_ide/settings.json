@@ -1,0 +1,3 @@
+{
+    "vitis.build.application –PlatformBuildDependency": "always"
+}
