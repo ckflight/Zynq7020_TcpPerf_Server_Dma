@@ -33,7 +33,7 @@
           "isFsbl": false,
           "usingFSBL": {
             "initWithFSBL": true,
-            "fsblFile": "${workspaceFolder}\\zynq_arm_perf\\export\\zynq_arm_perf\\sw\\boot\\fsbl.elf",
+            "fsblFile": "${workspaceFolder}\\zynq_perf\\export\\zynq_perf\\sw\\boot\\fsbl.elf",
             "fsblExitSymbol": "FsblHandoffJtagExit"
           },
           "usingPs7Init": {

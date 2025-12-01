@@ -40,7 +40,7 @@ preplace netloc processing_system7_0_DDR 1 4 1 NJ 700
 preplace netloc processing_system7_0_FIXED_IO 1 4 1 1480J 720n
 preplace netloc processing_system7_0_M_AXI_GP0 1 0 5 30 630 NJ 630 NJ 630 NJ 630 1460
 levelinfo -pg 1 0 170 510 830 1240 1500
-pagesize -pg 1 -db -bbox -sgen -160 0 1700 930
+pagesize -pg 1 -db -bbox -sgen -160 0 1720 930
 "
 }
 {

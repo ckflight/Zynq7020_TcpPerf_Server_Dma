@@ -10,6 +10,35 @@
 #include "xil_cache.h"
 #include "xil_exception.h"
 
+/*
+These settings affect ethernet speed!!!
+===========================================================
+1) DHCP Settings
+-----------------------------------------------------------
+lwip220_dhcp = True
+lwip220_lwip_dhcp_does_acd_check = True
+
+2) Memory Size
+-----------------------------------------------------------
+lwip220_mem_size = 524288
+
+3) PBUF & Memory Pool Settings
+-----------------------------------------------------------
+lwip220_memp_n_pbuf      = 1024
+lwip220_memp_n_tcp_seg  = 1024
+lwip220_pbuf_pool_size = 16384
+
+4) TCP Buffer Settings
+-----------------------------------------------------------
+lwip220_tcp_snd_buf = 65535
+lwip220_tcp_wnd     = 65535
+
+5) PHY DMA Descriptor Settings
+-----------------------------------------------------------
+lwip220_n_rx_descriptors = 512
+lwip220_n_tx_descriptors = 512
+*/
+
 /* ===================== SYSTEM CONSTANTS ===================== */
 
 #undef  DMA_S2MM_INTR_ID
