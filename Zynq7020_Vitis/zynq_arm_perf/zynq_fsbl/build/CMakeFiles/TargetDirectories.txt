@@ -1,4 +1,0 @@
-C:/Users/CK/Desktop/Workspace/Vitis_Workspace/ZC702_Zynq/zynq_arm_perf/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
-C:/Users/CK/Desktop/Workspace/Vitis_Workspace/ZC702_Zynq/zynq_arm_perf/zynq_fsbl/build/CMakeFiles/print_build_info.dir
-C:/Users/CK/Desktop/Workspace/Vitis_Workspace/ZC702_Zynq/zynq_arm_perf/zynq_fsbl/build/CMakeFiles/edit_cache.dir
-C:/Users/CK/Desktop/Workspace/Vitis_Workspace/ZC702_Zynq/zynq_arm_perf/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir
