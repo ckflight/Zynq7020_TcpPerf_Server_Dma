@@ -3,7 +3,7 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK/top_module.xsa",
+    "xsa": "C:/Users/CK/Desktop/Vivado/ZC702_EVK/top_module.xsa",
     "xsaPathInPlatform": "zynq_perf/hw/top_module.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",

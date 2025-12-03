@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/CK/Desktop/VIVADO_PROJECTS/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/emacps/src
+# Install script for directory: C:/Users/CK/Desktop/Vivado/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/emacps/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

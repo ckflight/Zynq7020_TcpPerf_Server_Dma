@@ -283,11 +283,13 @@ int main(void)
     u16 ttc_start = XTtcPs_GetCounterValue(&Ttc);
 
     XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)RxBuffer, data_size, XAXIDMA_DEVICE_TO_DMA);
-
+    
     XGpio_DiscreteWrite(&GpioTrigger, 1, 1);
     xil_printf("GPIO start signal sent\r\n");
-
-    while (!S2MM_Done && !DMA_Error);    
+    
+    XGpio_DiscreteWrite(&GpioTrigger, 1, 0x00);
+    
+    while(!S2MM_Done && !DMA_Error);    
     
     /* --- TTC end value --- */
     u16 ttc_end = XTtcPs_GetCounterValue(&Ttc);

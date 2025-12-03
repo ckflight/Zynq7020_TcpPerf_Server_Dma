@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/CK/Desktop/VIVADO_PROJECTS/ZC702_EVK/Zynq7020_Vitis/zynq_perf/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/sdps/src
+# Install script for directory: C:/Users/CK/Desktop/Vivado/ZC702_EVK/Zynq7020_Vitis/zynq_perf/ps7_cortexa9_0/standalone_ps7_cortexa9_0/bsp/libsrc/sdps/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

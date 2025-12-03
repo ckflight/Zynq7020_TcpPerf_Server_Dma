@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="71" Path="C:/Users/CK/Desktop/FPGA_Workspace/VIVADO_PROJECTS/ZC702_EVK/ZC702_EVK_Test.xpr">
+<Project Product="Vivado" Version="7" Minor="71" Path="C:/Users/CK/Desktop/Vivado/ZC702_EVK/ZC702_EVK_Test.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="149276f750f84a44ac317ac323edfefa"/>

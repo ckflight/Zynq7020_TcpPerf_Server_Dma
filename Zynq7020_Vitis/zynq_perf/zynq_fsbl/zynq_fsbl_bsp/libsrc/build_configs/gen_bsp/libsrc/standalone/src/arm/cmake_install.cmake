@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/CK/Desktop/VIVADO_PROJECTS/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/standalone/src/arm
+# Install script for directory: C:/Users/CK/Desktop/Vivado/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/standalone/src/arm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/CK/Desktop/VIVADO_PROJECTS/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/cmake_install.cmake")
+  include("C:/Users/CK/Desktop/Vivado/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/CK/Desktop/VIVADO_PROJECTS/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/cmake_install.cmake")
+  include("C:/Users/CK/Desktop/Vivado/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src/arm/cortexa9/cmake_install.cmake")
 endif()
 

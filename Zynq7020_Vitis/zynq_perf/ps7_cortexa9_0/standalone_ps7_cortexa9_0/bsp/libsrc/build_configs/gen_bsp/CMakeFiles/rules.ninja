@@ -434,7 +434,7 @@ rule C_STATIC_LIBRARY_LINKER__lwip220_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Xilinx\2025.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SC:\Users\CK\Desktop\VIVADO_PROJECTS\ZC702_EVK\Zynq7020_Vitis\zynq_perf\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -BC:\Users\CK\Desktop\VIVADO_PROJECTS\ZC702_EVK\Zynq7020_Vitis\zynq_perf\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\libsrc\build_configs\gen_bsp
+  command = C:\Xilinx\2025.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SC:\Users\CK\Desktop\Vivado\ZC702_EVK\Zynq7020_Vitis\zynq_perf\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp -BC:\Users\CK\Desktop\Vivado\ZC702_EVK\Zynq7020_Vitis\zynq_perf\ps7_cortexa9_0\standalone_ps7_cortexa9_0\bsp\libsrc\build_configs\gen_bsp
   description = Re-running CMake...
   generator = 1
 

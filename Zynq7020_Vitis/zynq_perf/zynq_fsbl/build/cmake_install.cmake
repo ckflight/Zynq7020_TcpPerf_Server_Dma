@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/CK/Desktop/VIVADO_PROJECTS/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl
+# Install script for directory: C:/Users/CK/Desktop/Vivado/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/CK/Desktop/VIVADO_PROJECTS/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/CK/Desktop/Vivado/ZC702_EVK/Zynq7020_Vitis/zynq_perf/zynq_fsbl/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
