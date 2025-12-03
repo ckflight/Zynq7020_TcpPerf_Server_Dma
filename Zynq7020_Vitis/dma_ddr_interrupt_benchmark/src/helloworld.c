@@ -10,6 +10,8 @@
 #include "xil_cache.h"
 #include "xil_exception.h"
 
+#include "xttcps.h"
+
 /*
 These settings affect ethernet speed!!!
 ===========================================================
@@ -50,6 +52,10 @@ lwip220_n_tx_descriptors = 512
 //#define FCLK0_FREQ_HZ      142857132.0
 #define FCLK0_FREQ_HZ      150000000.0
 
+#define TTC_CLK_HZ      XPAR_XTTCPS_0_CLOCK_FREQ        // from xparameters.h
+#define TTC_PRESCALER   6                             // divide by 2^6 = 64
+
+
 #define PRINT_DDR_CONTENT   0
 
 const int burst_words       = 1048576; //= 1048576 ; 
@@ -59,6 +65,8 @@ const int data_address_size = burst_words;
 int dma_print_increment     = 1;
 
 /* ===================== GLOBAL OBJECTS ===================== */
+
+XTtcPs Ttc;
 
 XAxiDma  AxiDma;
 XScuGic  Intc;
@@ -220,10 +228,43 @@ int VerifyDdrContent(u64 *buf, u32 word_count)
     }
 }
 
+int InitTtc(void)
+{
+    int Status;
+    XTtcPs_Config *Config;
+    u32 Options;
+
+    Config = XTtcPs_LookupConfig(XPAR_TTC0_BASEADDR);
+    if (Config == NULL) {
+        return XST_FAILURE;
+    }
+
+    Status = XTtcPs_CfgInitialize(&Ttc, Config, Config->BaseAddress);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    /* Free-running mode, no interval, no waveform */
+    Options = XTTCPS_OPTION_WAVE_DISABLE;
+    XTtcPs_SetOptions(&Ttc, Options);
+
+    /* Prescaler: divides TTC_CLK_HZ by 2^TTC_PRESCALER */
+    XTtcPs_SetPrescaler(&Ttc, TTC_PRESCALER);
+
+    XTtcPs_Start(&Ttc);
+
+    return XST_SUCCESS;
+}
+
 
 int main(void)
 {
     init_platform();
+
+    if (InitTtc() != XST_SUCCESS) {
+        xil_printf("TTC init failed!\r\n");
+        return -1;
+    }
 
     InitGpio();
     InitAxiDma();
@@ -238,13 +279,19 @@ int main(void)
 
     xil_printf("Starting DMA...\r\n");
 
+    /* --- TTC start value (16-bit counter) --- */
+    u16 ttc_start = XTtcPs_GetCounterValue(&Ttc);
+
     XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)RxBuffer, data_size, XAXIDMA_DEVICE_TO_DMA);
 
     XGpio_DiscreteWrite(&GpioTrigger, 1, 1);
     xil_printf("GPIO start signal sent\r\n");
 
-    while (!S2MM_Done && !DMA_Error);
-
+    while (!S2MM_Done && !DMA_Error);    
+    
+    /* --- TTC end value --- */
+    u16 ttc_end = XTtcPs_GetCounterValue(&Ttc);
+    
     if (DMA_Error) {
         xil_printf("DMA FAILED\r\n");
         return -1;
@@ -280,6 +327,26 @@ int main(void)
     xil_printf("delta_ms = %u,%u ms\r\n", (int)(delta_sec*1000.0), (((int)(delta_sec*1000000.0))%1000));
     xil_printf("speed = %ubps\r\n", speed);
     xil_printf("speed = %uMbps\r\n", speed/1000000);
+            
+
+    u16 ttc_delta;
+    if (ttc_end >= ttc_start)
+        ttc_delta = ttc_end - ttc_start;
+    else
+        ttc_delta = (u16)(0x10000 - ttc_start + ttc_end);   // handle wrap
+
+    /* Tick period: (2^prescaler) / TTC_CLK_HZ seconds */
+    float tick_period = ((double)(1U << (TTC_PRESCALER + 1))) / (double)TTC_CLK_HZ;
+    float ttc_delta_sec = (double)ttc_delta * tick_period;
+
+    int ttc_speed   = (float)data_size / ttc_delta_sec;
+
+    xil_printf("TTC start = %u\r\n", ttc_start);
+    xil_printf("TTC end   = %u\r\n", ttc_end);
+    xil_printf("TTC delta = %u ticks\r\n", ttc_delta);  
+    xil_printf("TTC delta_ms = %u,%u ms\r\n", (int)(ttc_delta_sec*1000.0), (((int)(ttc_delta_sec*1000000.0))%1000));
+    xil_printf("speed = %ubps\r\n", ttc_speed);
+    xil_printf("speed = %uMbps\r\n", ttc_speed/1000000);
             
     print_ddr_content((u32*)DDR_BASE_ADDR);
 
